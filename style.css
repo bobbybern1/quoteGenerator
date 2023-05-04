@@ -1,0 +1,59 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0072c6, #00b050);
+  
+}
+
+
+.main {
+  width: 80%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: transform 0.5s;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form, .quoteDisplay {
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  transition: transform 0.5s ease;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.quoteDisplay {
+  transform: rotateY(180deg);
+}
+
+.quoteDisplay.flipped {
+  transform: rotateY(0deg);
+}
+
+.form {
+  transform: rotateY(0deg);
+}
+
+.form.flipped {
+  transform: rotateY(180deg);
+}
